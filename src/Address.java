@@ -7,7 +7,7 @@ public class Address {
     private final Integer postCode; // will be optional and may be null
 
     public Address(String addressLine, String city, Integer postCode) {
-        this.addressLine = Objects.requireNonNull(addressLine);
+        this.addressLine = Objects.requireNonNull(addressLine, "must not be null");
         this.city = Objects.requireNonNull(city);
         this.postCode = postCode;
     }
